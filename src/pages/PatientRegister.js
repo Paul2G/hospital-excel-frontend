@@ -86,23 +86,23 @@ function PatientRegister(e) {
         <form id="patientRegister" onSubmit={savePatient}>
           <div className="block personal-info">
             <label>
-              Nombre
+              <span className="required">Nombre</span>
               <input type="text" name="firstname" placeholder="Nombre(s)" required />
             </label>
             <label>
-              Apellido paterno
+              <span className="required">Apellido paterno</span>
               <input type="text" name="lastname" placeholder="Apellido paterno" onBlur={checkConcidences} required />
             </label>
             <label>
-              Apellido materno
+              <span>Apellido materno</span>
               <input type="text" name="lastname2" placeholder="Apellido materno" onBlur={checkConcidences}/>
             </label>
             <label>
-              Fecha de nacimiento
+            <span className="required">Fecha de nacimiento</span>
               <input type="date" name="birthdate" placeholder="Fecha de nacimiento" onBlur={checkConcidences} required />
             </label>
             <label>
-              Género
+              <span className="required">Género</span>
               <select name="genre" defaultValue="0" required>
                 <option value="0" disabled>Seleccione su género...</option>
                 <option>Hombre</option>
@@ -111,7 +111,7 @@ function PatientRegister(e) {
               </select>
             </label>
             <label>
-              Estado civil
+              <span className="required">Estado civil</span>
               <select name="civilstatus" defaultValue="0" required>
                 <option value="0" disabled>Seleccione su estado civil...</option>
                 <option>Soltero</option>
@@ -122,11 +122,11 @@ function PatientRegister(e) {
           </div>
           <div className="block contact-info">
             <label>
-              Teléfono principal
+              <span className="required">Teléfono principal</span>
               <input type="tel" name="telphone" placeholder="Numero telefónico" onBlur={checkConcidences} required />
             </label>
             <label>
-              Tipo de teléfono
+            <span className="required">Tipo de teléfono</span>
               <select name="teltype" defaultValue="0" required>
                 <option value="0" disabled>Seleccione su tipo de teléfono...</option>
                 <option>Fijo</option>
@@ -134,19 +134,19 @@ function PatientRegister(e) {
               </select>
             </label>
             <label>
-              Teléfono emergencia
+              <span className="required">Teléfono emergencia</span>
               <input type="tel" name="emergencytel" placeholder="Número telefónico de emergencia" required />
             </label>
             <label>
-              Contacto de emergencia
+            <span className="required">Contacto de emergencia</span>
               <input type="text" name="emergencycontact" placeholder="Nombre de contacto de emergencia" required/>
             </label>
             <label>
-              Correo principal
+              <span>Correo principal</span>
               <input type="email" name="email" placeholder="Correo electrónico"/>
             </label>
             <label>
-              Seguro de gastos médicos
+              <span className="required">Seguro de gastos médicos</span>
               <select name="insurance" defaultValue="0" required>
                 <option value="0" disabled>Seleccione su aseguradora...</option>
                 <option>Ninguno</option>

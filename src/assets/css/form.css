@@ -24,6 +24,12 @@ form .personal-info label{
     width: 33.3%;
 }
 
+form label span.required:after{
+    font-weight: 600;
+    content: "*";
+    color: red;
+}
+
 form label :is(input, select){
     padding: 1rem;
     border: 1px solid var(--primary-color);
