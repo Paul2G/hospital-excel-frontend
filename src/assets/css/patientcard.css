@@ -14,13 +14,13 @@
 
     padding: 1rem;
     border: 1px solid var(--primary-color);
-    box-shadow: 0 0 0.5rem #0001;
+    box-shadow: 0.2rem 0.2rem 0rem #0006;
 
     transition: ease all 250ms;
 }
 
 .patient-card:hover {
-    box-shadow: 0 0 0.5rem #000A;
+    box-shadow: 0.4rem 0.4rem 0rem #0006;
 }
 
 .patient-card .avatar-pic img {

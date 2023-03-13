@@ -20,6 +20,14 @@
     border: 1px solid var(--primary-color);
     padding: 1rem;
     width: 30rem;
+
+    box-shadow: 0.2rem 0.2rem 0rem #0006;
+    transition: all ease 250ms;
+}
+
+.search-area .search-input:focus {
+    outline: 1px solid var(--primary-color);
+    box-shadow: 0.4rem 0.4rem 0rem #0006;
 }
 
 .patients-list {

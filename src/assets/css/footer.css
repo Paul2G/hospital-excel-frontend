@@ -1,0 +1,68 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+.footbar {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    background-color: black;
+    border-top: 1px solid gray;
+
+    font-size: 1.5rem;
+  }
+  
+  .footbar .foot-container {
+    width: 100%;
+    max-width: var(--max-content-width);
+    display: flex;
+  }
+  
+  .footbar .foot-container section {
+    width: 50%;
+    padding: 4rem 3rem;
+  }
+
+  .footbar .foot-container .block-content {
+    padding: 1rem;
+  }
+
+  .footbar .foot-container a{
+    color: white;
+    text-decoration: none;
+    transition: all ease 250ms;
+  }
+  
+  .footbar .foot-container a:hover{
+    color: #89b8ff;
+  }
+  
+  .footbar .foot-container ul {
+    list-style-type: none;
+  }
+  
+  .footbar .foot-container li {
+    padding-bottom: 1rem;
+  }
+
+  .footbar .foot-container li i {
+    padding-right: 0.5rem;
+  }
+  
+  @media (max-width: 576px){
+    .footbar .foot-container section {
+      padding: 1rem 3rem;
+      width: 100%;
+    }
+  
+    .footbar .foot-container {
+      display: inline;
+      padding: 1rem 0rem;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .footbar .foot-container {
+      width: 100%;
+    }
+  }
+  

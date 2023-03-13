@@ -5,6 +5,7 @@ import Patients from "./pages/Patients";
 import PatientRegister from "./pages/PatientRegister";
 
 import "./assets/css/globals.css"
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
               <Route path="/register" element={<PatientRegister />}/>
             </Routes>
           </main>
+          <Footer />
       </Router>
     </div>
   );

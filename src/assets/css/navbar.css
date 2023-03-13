@@ -1,12 +1,15 @@
 header {
     width: 100%;
-    padding: 16px 0px;
+    padding: 1.6rem 0rem;
     display: flex;
     justify-content: center;
 
     background-color: var(--primary-color);
     border-bottom: 1px solid gray;
+    box-shadow: 0rem 0rem 0.5rem #0001;
 
+    position: sticky;
+    top: 0;
     z-index: 100;
 }
 
@@ -23,21 +26,20 @@ header .navbar-container {
 
 .navbar-container .site {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .navbar-container .site .site-name {
     width: 24rem;
     color: white;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 800;
     text-transform: uppercase;
 }
 
-.navbar-container .site .site-subname {
-    color: white;
-    font-size: 1.5rem;
-    padding-bottom: 0.3rem;
+.navbar-container .site .site-logo {
+    width: 4rem;
+    margin-right: 1rem;
 }
 
 .navbar-container .navbar {
@@ -56,7 +58,7 @@ header .navbar-container {
 
 .navbar-container .navbar ul li {
     display: inline;
-    margin-right: 16px;
+    margin-right: 1.6rem;
 }
 
 .navbar-container .navbar .navbar-item {
@@ -73,8 +75,14 @@ header .navbar-container {
     body .navbar-container{
       padding: 3rem 3rem;
     }
-    
-    .navbar-container .site .site-subname {
-        display: none;
+}
+
+@media screen and (max-width: 450px) {
+    .navbar-container .site .site-name{
+      display: none;
+    }
+
+    .navbar-container .site .site-logo {
+        width: 5rem;
     }
 }

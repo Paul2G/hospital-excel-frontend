@@ -69,6 +69,8 @@ function PatientRegister(e) {
   }
 
   useEffect(() => {
+    document.body?.classList.remove("noscroll");
+    
     axios.get(baseURL + "/api/patients").then((response) => {
       if(!response.data.error){
         setPatients(response.data.patients);
