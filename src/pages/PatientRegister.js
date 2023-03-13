@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 import PatientCard from "../components/PatientCard";
 import PatientOffcanvas from "../components/PatientOffcanvas";
@@ -7,13 +8,15 @@ import { validateForm } from "../functions/validations";
 
 import "../assets/css/patientregisterPage.css"
 import "../assets/css/form.css";
-import "../assets/css/buttons.css"
+import "../assets/css/buttons.css";
+
+let baseURL = window.location.protocol.concat("//").concat(window.location.host);
 
 function PatientRegister(e) {
-  let patients = require('../assets/json/mockpatientdata.json');
+  let [patients, setPatients] = useState(null)
   let [checkCount, setChekCount] = useState(0);
   const [checkingResults, setCheckingResults] = useState();
-  const [currentPatient, setCurrentPatient] = useState(patients[0]);
+  const [currentPatient, setCurrentPatient] = useState(null);
 
   function checkConcidences(){
     let registerForm = document.getElementById("patientRegister");
@@ -42,8 +45,10 @@ function PatientRegister(e) {
     displayErrorMessage(validation);
 
     if(!validation.error) {
-      patients.push(validation.patient);
-      registerForm.reset();
+      axios.post(baseURL + "/api/patients", validation.patient).then((response) => {
+        console.log(response.data);
+      });
+      //registerForm.reset();
     }
   }
 
@@ -62,6 +67,15 @@ function PatientRegister(e) {
   function showPatientInfo(patient){
     setCurrentPatient(patient);
   }
+
+  useEffect(() => {
+    axios.get(baseURL + "/api/patients").then((response) => {
+      if(!response.data.error){
+        setPatients(response.data.patients);
+        setCurrentPatient(response.data.patients[0]);
+      }
+    });
+  }, []);
 
   return (
     <div className="patient-register">
@@ -149,9 +163,13 @@ function PatientRegister(e) {
           {checkingResults?.map((patient, i) => 
             <PatientCard key={i} patientData={patient} showPatientInfo={showPatientInfo}/>
           )}
-          <PatientOffcanvas 
-            currentPatient={currentPatient}
-          />
+          { currentPatient !== null ? 
+            <PatientOffcanvas 
+              currentPatient={currentPatient}
+            /> :
+            <noscript>No hay nadie.</noscript>
+          }
+          
       </div> 
     </div>
   );

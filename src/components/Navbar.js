@@ -15,7 +15,7 @@ function Navbar() {
           <ul>
             <li>
               <NavLink to="/register" className="navbar-item">
-                Registro
+                Registrar paciente
               </NavLink>
             </li>
           </ul>

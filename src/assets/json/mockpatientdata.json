@@ -10,7 +10,7 @@
         "teltype": "Fijo",
         "emergencytel": "5113937736",
         "emergencycontact": "Jazmin",
-        "email": null,
+        "email": "",
         "insurance": "Aseguradora 1",
         "fullname": "Ardelia Eger Firebrace"
     },
@@ -190,7 +190,7 @@
         "teltype": "Fijo",
         "emergencytel": "8232667546",
         "emergencycontact": "Britney",
-        "email": null,
+        "email": "",
         "insurance": "Ninguno",
         "fullname": "Joellyn Lafontaine Szachniewicz"
     },

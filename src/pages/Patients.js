@@ -1,16 +1,19 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
 import PatientCard from '../components/PatientCard';
 import PatientOffcanvas from '../components/PatientOffcanvas';
 
 import "../assets/css/patientsPage.css";
-import "../assets/css/buttons.css"
+import "../assets/css/buttons.css";
+
+let baseURL = window.location.protocol.concat("//").concat(window.location.host);
 
 function Patients() {
   let navigate = useNavigate();
-  let patients = require('../assets/json/mockpatientdata.json');
-  const [currentPatient, setCurrentPatient] = useState(patients[0]);
+  let [patients, setPatients] = useState(null);
+  const [currentPatient, setCurrentPatient] = useState(null);
 
   let [searchResults, setSearchResults] = useState(patients);
   let [searchCount, setSearchCount] = useState(0);
@@ -49,6 +52,15 @@ function Patients() {
     setSearchTerm(searchField.value);
   }
 
+  useEffect(() => {
+    axios.get(baseURL + "/api/patients").then((response) => {
+      if(!response.data.error){
+        setPatients(response.data.patients);
+        setCurrentPatient(response.data.patients[0]);
+      }
+    });
+  }, []);
+
   return (
     <div>
       <div className='search-area'>
@@ -59,12 +71,17 @@ function Patients() {
         <h1>{"Lista de pacientes"}</h1>
         <button className="primary-button" onClick={() => navigate('/register')}>Añadir nuevo</button>
       </div>
+      
       {wannaSearch ? 
           <h2>{searchCount} resultados de búsqueda para "{searchTerm}"</h2> : ""}
-      {displayPatients()}
-      <PatientOffcanvas 
-        currentPatient={currentPatient}
-      />
+      {patients !== null ? displayPatients() : <noscript>Perdimos</noscript>}
+      {currentPatient !== null ? 
+        <PatientOffcanvas 
+          currentPatient={currentPatient}
+        /> :
+        <noscript>Otra vez nadie</noscript>
+      }
+      
     </div>
   )
 }

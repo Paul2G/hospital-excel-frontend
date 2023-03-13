@@ -20,7 +20,7 @@ function PatientOffcanvas(props) {
           {formfields.filter(d => d.group === "personal").map((dataname, i) => 
               <div key={i}>
                 <span className="dataname">{dataname.name}:&nbsp;</span>
-                {dataname.id !== "birthdate" ? patient[dataname.id] : new Date(patient[dataname.id]).toLocaleDateString()}
+                {dataname.id !== "birthdate" ? patient[dataname.id] : new Date(patient[dataname.id]).toLocaleDateString("es-MX", {timeZone: "UTC"})}
               </div>
             )
           }
@@ -28,7 +28,7 @@ function PatientOffcanvas(props) {
         <div className='info-block'>
           <h3>De contacto</h3>
           {formfields.filter(d => d.group === "contact").map((dataname, i) => {
-            return( patient[dataname.id] !== null ?
+            return( patient[dataname.id] !== "" ?
               <div key={i}>
                 <span className="dataname">{dataname.name}:&nbsp;</span>
                 {patient[dataname.id]}
