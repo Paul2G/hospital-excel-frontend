@@ -1,0 +1,27 @@
+.offcanvas-content.patient .avatar-pic img{
+    width: 70%;
+    margin: 1rem 0rem;
+}
+
+.offcanvas-content.patient .patient-info {
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.offcanvas-content.patient .patient-info .info-block {
+    margin-bottom: 1rem;
+}
+
+.offcanvas-content.patient :is(h1, h3) {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.offcanvas-content.patient .patient-info div {
+    margin-bottom: 0.7rem;
+}
+
+.offcanvas-content.patient .dataname {
+    font-weight: 600;
+}

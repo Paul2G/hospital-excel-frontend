@@ -1,0 +1,48 @@
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
+    padding: 0.5rem;
+    gap: 0.5rem;
+}
+
+form label:nth-child(-n+6){
+    width: 33.3%;
+}
+
+form label :is(input, select){
+    padding: 0.7rem;
+    border: 1px solid var(--primary-color);
+}
+
+form label :is(input, select):focus {
+    outline: 1px solid var(--primary-color);
+}
+
+form .send-area{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+form .send-area .span-message {
+    margin-bottom: 0.5rem;
+}
+
+form .send-area .span-message.error{
+    color: red;
+}
+
+form button {
+    display: block;
+    width: 30%;
+}

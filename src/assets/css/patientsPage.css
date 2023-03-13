@@ -1,0 +1,24 @@
+.patients-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    gap: 2rem;
+}
+
+.search-area {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1rem;
+}
+
+.search-area .search-input {
+    padding: 1rem;
+    width: 30rem;
+}

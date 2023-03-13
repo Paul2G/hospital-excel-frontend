@@ -1,0 +1,28 @@
+button {
+    cursor: pointer;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--primary-color);
+    
+    transition: ease all 250ms;
+}
+
+button.primary-button {    
+    background-color: var(--primary-color);
+    color: white;
+}
+
+button.secondary-button{
+    background-color: white;
+    color: var(--primary-color);
+}
+
+button.primary-button:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+button.secondary-button:hover {    
+    background-color: var(--primary-color);
+    color: white;
+}

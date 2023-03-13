@@ -1,0 +1,80 @@
+[
+  {
+    "id": "firstname",
+    "name": "Nombre",
+    "type": "word",
+    "group": "none"
+  },
+  {
+    "id": "lastname",
+    "name": "Apellido paterno",
+    "type": "word",
+    "group": "none"
+  },
+  {
+    "id": "lastname2",
+    "name": "Apellido materno",
+    "type": "word",
+    "group": "none"
+  },
+  {
+    "id": "fullname",
+    "name": "Nombre",
+    "type": "fullname",
+    "group": "personal"
+  },
+  {
+    "id": "birthdate",
+    "name": "Fecha de nacimiento",
+    "type": "date",
+    "group": "personal"
+  },
+  {
+    "id": "genre",
+    "name": "Género",
+    "type": "select",
+    "group": "personal"
+  },
+  {
+    "id": "civilstatus",
+    "name": "Estado civil",
+    "type": "select",
+    "group": "personal"
+  },
+  {
+    "id": "telphone",
+    "name": "Teléfono principal",
+    "type": "number",
+    "group": "contact"
+  },
+  {
+    "id": "teltype",
+    "name": "Tipo de teléfono",
+    "type": "select",
+    "group": "contact"
+  },
+  {
+    "id": "emergencytel",
+    "name": "Teléfono de emergencia",
+    "type": "number",
+    "group": "contact"
+  },
+  {
+    "id": "emergencycontact",
+    "name": "Contacto de emergencia",
+    "type": "word",
+    "group": "contact"
+  },
+  {
+    "id": "email",
+    "name": "Correo electrónico",
+    "type": "email",
+    "group": "contact"
+  },
+  {
+    "id": "insurance",
+    "name": "Seguro de gastos médicos",
+    "type": "select",
+    "group": "personal"
+  }
+]

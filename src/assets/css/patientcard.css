@@ -1,0 +1,35 @@
+.patient-card {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: min-content;
+    margin: 0.5rem;
+
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 0 0.5rem #0001;
+
+    transition: ease all 250ms;
+}
+
+.patient-card:hover {
+    box-shadow: 0 0 0.5rem #000A;
+}
+
+.patient-card .avatar-pic img {
+    width: 100px;
+}
+
+.patient-card .patient-data{
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 1rem;
+    width: 180px;
+}
+
+.patient-card .patient-data .dataname {
+    font-weight: 600;
+}

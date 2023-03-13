@@ -1,0 +1,16 @@
+.patient-register {
+    display: flex;
+    flex-direction: row;
+}
+
+.patient-register .register {
+    width: 70%;
+    padding-right: 1rem;
+}
+
+.patient-register .concidence {
+    border-left: 1px solid #0001;
+    padding-left: 1rem;
+    width: 30%;
+}
+
