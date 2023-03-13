@@ -63,13 +63,15 @@ function Patients() {
 
   return (
     <div>
-      <div className='search-area'>
-        <input id="searchField" className="search-input" placeholder='Buscar nombre...' onChange={searchPatients}/>
-        <button className="primary-button">🔍︎</button>
-      </div>
-      <div className="title"> 
-        <h1>{"Lista de pacientes"}</h1>
-        <button className="primary-button" onClick={() => navigate('/register')}>Añadir nuevo</button>
+      <div className='page-header'>
+        <div className="title"> 
+          <h1>{"Lista de pacientes"}</h1>
+          <button className="primary-button" onClick={() => navigate('/register')}>Añadir nuevo</button>
+        </div>
+        <div className='search-area'>
+          <input id="searchField" className="search-input" placeholder='Buscar nombre...' onChange={searchPatients}/>
+          <button className="primary-button">🔍︎</button>
+        </div>
       </div>
       
       {wannaSearch ? 

@@ -15,25 +15,28 @@ function PatientCard(props) {
     }
 
     return (
-        <div className="patient-card" onClick={showPatientDataOffcanvas}>
-            <div className='avatar-pic'>
-                <img src={avatarDefault} alt="Avatar" />
-            </div>
-            <div className='patient-data'>
-                <div>
-                    <span className="dataname">Nombre:&nbsp;</span>
-                    {patient.fullname}
+        <div className="card-container">
+            <div className="patient-card" onClick={showPatientDataOffcanvas}>
+                <div className='avatar-pic'>
+                    <img src={avatarDefault} alt="Avatar" />
                 </div>
-                <div>
-                    <span className="dataname">Edad:&nbsp;</span>
-                    {calculateAge(patient.birthdate) + " años"}
-                </div>
-                <div>
-                    <span className="dataname">Teléfono:&nbsp;</span>
-                    {patient.telphone}
+                <div className='patient-data'>
+                    <div>
+                        <span className="dataname">Nombre:&nbsp;</span>
+                        {patient.fullname}
+                    </div>
+                    <div>
+                        <span className="dataname">Edad:&nbsp;</span>
+                        {calculateAge(patient.birthdate) + " años"}
+                    </div>
+                    <div>
+                        <span className="dataname">Teléfono:&nbsp;</span>
+                        {patient.telphone}
+                    </div>
                 </div>
             </div>
         </div>
+
     )
 }
 

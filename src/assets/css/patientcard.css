@@ -1,11 +1,16 @@
+.card-container {
+    display: flex;
+    width: 33.3%;
+    padding: 0.5rem;
+}
+
 .patient-card {
     cursor: pointer;
 
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: min-content;
-    margin: 0.5rem;
+    width: 100%;
 
     padding: 1rem;
     border: 1px solid var(--primary-color);
@@ -19,7 +24,7 @@
 }
 
 .patient-card .avatar-pic img {
-    width: 100px;
+    width: 10rem;
 }
 
 .patient-card .patient-data{
@@ -27,9 +32,73 @@
     flex-direction: column;
 
     padding-left: 1rem;
-    width: 180px;
+    width: 18rem;
 }
 
 .patient-card .patient-data .dataname {
     font-weight: 600;
+}
+
+/*------------Caso especial---------------*/
+.patient-register .card-container {
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .patient-register .patient-card {
+        flex-direction: column;
+    }
+
+    .patient-register .patient-card .patient-data{
+        width: 100%;   
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .patient-register .card-container {
+        width: 100%;
+    }
+
+    .patient-register .patient-card {
+        flex-direction: row;
+    }
+
+    .patient-register .patient-card .patient-data{
+        width: 100%;   
+        padding: 1rem;
+    }
+}
+
+/*------------------Reponsividad------------*/
+@media screen and (max-width: 1070px) {
+    .card-container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .patient-card {
+        flex-direction: column;
+    }
+
+    .patient-card .patient-data{
+        width: 100%;   
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card-container {
+        width: 100%;
+    }
+
+    .patient-card {
+        flex-direction: row;
+    }
+
+    .patient-card .patient-data{
+        width: 100%;   
+        padding: 1rem;
+    }
 }

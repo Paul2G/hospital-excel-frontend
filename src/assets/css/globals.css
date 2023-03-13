@@ -8,7 +8,7 @@
 
 html {
     --primary-color: #444;
-    --content-width: 1340px;
+    --max-content-width: 1400px;
     font-size: 62.5%;
     color: black;
 }
@@ -27,7 +27,7 @@ body .mainContent {
 }
 
 body .mainContent > div {
-    width: var(--content-width);
+    width: var(--max-content-width);
     min-height: 100vh;
     padding: 5rem 7rem;
     box-shadow: 0 0 1rem #0001;
@@ -68,4 +68,15 @@ body .mainContent > div > h1 {
   
   body::-webkit-scrollbar-thumb:hover {
     background-color: #777;
+  }
+
+  /*-----------------Media-----------------*/
+  @media screen and (max-width: 576px) {
+    body .mainContent > div {
+      padding: 3rem 3rem;
+    }
+
+    html {
+      font-size: 50%;
+    }
   }

@@ -1,8 +1,6 @@
-.patients-list {
+.page-header {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .title {
@@ -14,11 +12,38 @@
 
 .search-area {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     margin-bottom: 1rem;
 }
 
 .search-area .search-input {
+    border: 1px solid var(--primary-color);
     padding: 1rem;
     width: 30rem;
+}
+
+.patients-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*---------------Medias---------------------*/
+@media screen and (max-width: 912px) {
+    .page-header {
+        flex-direction: column;
+    }
+
+    .title{
+        justify-content: space-between;
+    }
+
+    .search-area {
+        width: 100%;
+    }
+
+    .search-area .search-input {
+        width: 100%;
+    }
 }

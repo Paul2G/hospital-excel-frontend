@@ -81,75 +81,79 @@ function PatientRegister(e) {
     <div className="patient-register">
       <div className="register">
         <h1>Registro de paciente</h1>
-        <form id="patientRegister" className="patient-register" onSubmit={savePatient}>
-          <label>
-            Nombre
-            <input type="text" name="firstname" placeholder="Nombre(s)" required />
-          </label>
-          <label>
-            Apellido paterno
-            <input type="text" name="lastname" placeholder="Apellido paterno" onBlur={checkConcidences} required />
-          </label>
-          <label>
-            Apellido materno
-            <input type="text" name="lastname2" placeholder="Apellido materno" onBlur={checkConcidences}/>
-          </label>
-          <label>
-            Fecha de nacimiento
-            <input type="date" name="birthdate" placeholder="Fecha de nacimiento" onBlur={checkConcidences} required />
-          </label>
-          <label>
-            Género
-            <select name="genre" defaultValue="0" required>
-              <option value="0" disabled>Seleccione su género...</option>
-              <option>Hombre</option>
-              <option>Mujer</option>
-              <option>Otro</option>
-            </select>
-          </label>
-          <label>
-            Estado civil
-            <select name="civilstatus" defaultValue="0" required>
-              <option value="0" disabled>Seleccione su estado civil...</option>
-              <option>Soltero</option>
-              <option>Casado</option>
-              <option>Unión libre</option>
-            </select>
-          </label>
-          <label>
-            Teléfono principal
-            <input type="tel" name="telphone" placeholder="Numero telefónico" onBlur={checkConcidences} required />
-          </label>
-          <label>
-            Tipo de teléfono
-            <select name="teltype" defaultValue="0" required>
-              <option value="0" disabled>Seleccione su tipo de teléfono...</option>
-              <option>Fijo</option>
-              <option>Celular</option>
-            </select>
-          </label>
-          <label>
-            Teléfono emergencia
-            <input type="tel" name="emergencytel" placeholder="Número telefónico de emergencia" required />
-          </label>
-          <label>
-            Contacto de emergencia
-            <input type="text" name="emergencycontact" placeholder="Nombre de contacto de emergencia" required/>
-          </label>
-          <label>
-            Correo principal
-            <input type="email" name="email" placeholder="Correo electrónico"/>
-          </label>
-          <label>
-            Seguro de gastos médicos
-            <select name="insurance" defaultValue="0" required>
-              <option value="0" disabled>Seleccione su aseguradora...</option>
-              <option>Ninguno</option>
-              <option>Aseguradora 1</option>
-              <option>Aseguradora 2</option>
-              <option>Aseguradora 3</option>
-            </select>
-          </label>
+        <form id="patientRegister" onSubmit={savePatient}>
+          <div className="block personal-info">
+            <label>
+              Nombre
+              <input type="text" name="firstname" placeholder="Nombre(s)" required />
+            </label>
+            <label>
+              Apellido paterno
+              <input type="text" name="lastname" placeholder="Apellido paterno" onBlur={checkConcidences} required />
+            </label>
+            <label>
+              Apellido materno
+              <input type="text" name="lastname2" placeholder="Apellido materno" onBlur={checkConcidences}/>
+            </label>
+            <label>
+              Fecha de nacimiento
+              <input type="date" name="birthdate" placeholder="Fecha de nacimiento" onBlur={checkConcidences} required />
+            </label>
+            <label>
+              Género
+              <select name="genre" defaultValue="0" required>
+                <option value="0" disabled>Seleccione su género...</option>
+                <option>Hombre</option>
+                <option>Mujer</option>
+                <option>Otro</option>
+              </select>
+            </label>
+            <label>
+              Estado civil
+              <select name="civilstatus" defaultValue="0" required>
+                <option value="0" disabled>Seleccione su estado civil...</option>
+                <option>Soltero</option>
+                <option>Casado</option>
+                <option>Unión libre</option>
+              </select>
+            </label>
+          </div>
+          <div className="block contact-info">
+            <label>
+              Teléfono principal
+              <input type="tel" name="telphone" placeholder="Numero telefónico" onBlur={checkConcidences} required />
+            </label>
+            <label>
+              Tipo de teléfono
+              <select name="teltype" defaultValue="0" required>
+                <option value="0" disabled>Seleccione su tipo de teléfono...</option>
+                <option>Fijo</option>
+                <option>Celular</option>
+              </select>
+            </label>
+            <label>
+              Teléfono emergencia
+              <input type="tel" name="emergencytel" placeholder="Número telefónico de emergencia" required />
+            </label>
+            <label>
+              Contacto de emergencia
+              <input type="text" name="emergencycontact" placeholder="Nombre de contacto de emergencia" required/>
+            </label>
+            <label>
+              Correo principal
+              <input type="email" name="email" placeholder="Correo electrónico"/>
+            </label>
+            <label>
+              Seguro de gastos médicos
+              <select name="insurance" defaultValue="0" required>
+                <option value="0" disabled>Seleccione su aseguradora...</option>
+                <option>Ninguno</option>
+                <option>Aseguradora 1</option>
+                <option>Aseguradora 2</option>
+                <option>Aseguradora 3</option>
+              </select>
+            </label>
+          </div>
           <div className="send-area">
             <span id="spanMessage" className="span-message">Asegurate de llenar correctamente todos los campos.</span>
             <button type="submit" className="primary-button">
